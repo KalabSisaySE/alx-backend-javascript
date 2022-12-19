@@ -7,3 +7,5 @@ function taskNext() {
   let text = 'But sometimes let is okay'
   return text
 }
+
+export {taskFirst, taskNext}
