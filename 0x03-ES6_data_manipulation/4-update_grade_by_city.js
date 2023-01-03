@@ -3,11 +3,7 @@ export default function updateStudentGradeByCity(arr, city, newGrades) {
   return fromCity.map((elm) => {
     const x = newGrades.find((x) => x.studentId === elm.id);
     const student = elm;
-    if (x !== undefined) {
-      student.grade = x.grade;
-    } else {
-      student.grade = 'N/A';
-    }
+    student.grade = x ? x.grade : 'N/A';
     return student;
   });
 }
